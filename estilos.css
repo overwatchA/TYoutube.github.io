@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Open sans', sans-serif;
+}
+
+
+.section-all-in{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 65px auto;
+    grid-template-rows: 60px auto;
+    grid-template-areas: "header header"
+                            "menu contenido";
+}
+
+/* ------------------------------HEADER---------------------------------*/
+.header{
+    grid-area: header;
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 10px;
+    grid-template-areas: "raya motor iconos";
+}
+
+/* ------------------------------Logo---------------------------------*/
+.raya-y-logo{
+    grid-area: raya;
+    display: flex;
+}
+.youtube-logo{
+    display:flex;
+    align-items: center;
+}
+.youtube-icono{
+    height: 18px;
+    margin: 5px;
+}
+.rayas{
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tres-rayas{
+    height: 18px;
+    margin: 15px;
+}
+
+/* ------------------------------Motor de Busqueda---------------------------------*/
+.buscar-y-microfono{
+    grid-area: motor;
+    display: flex;
+    justify-content: center;
+}
+
+.buscar-y-microfono input{
+    min-width: 50%;
+    border-radius: 50px;
+    padding: 0px 15px;
+    border: solid 1px #ccc;
+}
+/*.motor-e{
+    flex-grow: 1;
+    display: flex;
+    width:500px;
+    height: 40px;
+    border-radius: 100px;
+}*/
+
+
+.micro{
+    background-color: rgb(247, 240, 240);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------Iconos---------------------------------*/
+.header-iconos{
+    grid-area: iconos;
+    display: flex;
+    align-items: center;
+}
+.imagen-perfil{
+    border-radius: 50%;
+    width: 35px;
+    margin: 5px 30px 0px 10px
+}
+.icono{
+    color: black;
+    font-size: 20px;
+    margin: 0px 15px
+}
+
+
+/* ------------------------------MENU LATERAL---------------------------------*/
+.menu-lateral{
+    grid-area: menu;
+    
+}
+.iconos-menu{
+    
+}
+.iconos{
+    display: flex;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.parrafo-iconos{
+    text-align: center;
+    font-size: 10px;
+}
+
+
+
+
+
+/* ------------------------------CONTENIDO---------------------------------*/
+.contenido{
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px 0px;
+    
+}
+
+.video{
+    padding: 10px;
+}
+.imagen{
+}
+.perfil-y-texto{
+    display: flex;
+    gap: 5px;
+}
+.perfil{
+    flex-grow: 1;
+    
+}
+.texto{
+    flex-grow: 4;
+}
+.imagen-video{
+    width: 100%;
+    border-radius: 15px;
+}
+.imagen-perfil2{
+    border-radius: 50%;
+    width: 35px;
+}
+a .titulo{
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.parrafo{
+    color: gray;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* ------------------------------Mediaqueries---------------------------------*/
+@media screen and (max-width: 1050px) {
+    .contenido{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .contenido{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 790px) {
+    
+    .section-all-in{
+        grid-template-columns: 65px auto;
+    grid-template-rows: 60px auto;
+    grid-template-areas: "header header"
+                            "menu contenido";
+}
+    
+    .menu-lateral{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .buscar-y-microfono input{
+    display: none;
+    }    
+}
+
+@media screen and (max-width: 510px) {
+    .contenido{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
